@@ -1,0 +1,21 @@
+/* ==========================================================================
+   PENUMBRA · intro — the entrance. Black, a ring, three words, an iris.
+   ========================================================================== */
+.intro {
+  --r: -90px;
+  position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; align-content: center; gap: 36px;
+  background: #000; cursor: pointer;
+  /* the iris: transparent circle that grows from the centre */
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent var(--r), #000 calc(var(--r) + 90px));
+          mask-image: radial-gradient(circle at 50% 50%, transparent var(--r), #000 calc(var(--r) + 90px));
+}
+.intro[hidden] { display: none; }
+.intro__stage { position: relative; width: min(46vmin, 280px); aspect-ratio: 1; opacity: 0; }
+.intro__ring { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+.intro__ring circle { fill: none; stroke: var(--violet-hi); stroke-width: .9; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 5px var(--violet)); }
+.intro__stage::before { content: ""; position: absolute; inset: 13%; border-radius: 50%; background: radial-gradient(circle at 30% 70%, #f6f0ff, #b79cff 36%, #6d3df0 75%, #3a1a99); box-shadow: 0 0 80px 8px rgba(143,99,255,.45); }
+.intro__moon { position: absolute; inset: 13%; border-radius: 50%; background: #000; transform: translate(10%, -7%); }
+.intro__line { min-height: 1.3em; font-family: var(--display); font-style: italic; font-size: clamp(1.8rem, 4.4vw, 3rem); line-height: 1.2; color: var(--white); text-align: center; opacity: 0; }
+.intro__skip { position: absolute; right: var(--gutter); bottom: 32px; padding: 10px 4px; font-size: .86rem; color: var(--faint); opacity: 0; transition: opacity .6s, color .3s; }
+.intro__skip.is-visible { opacity: 1; }
+.intro__skip:hover { color: var(--white); }

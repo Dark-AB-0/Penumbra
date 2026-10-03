@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" class="is-intro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Penumbra · An archive of projects, experiments and ideas</title>
+  <meta name="description" content="An archive of projects, experiments and ideas.">
+  <meta name="theme-color" content="#030304">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23030304'/%3E%3Ccircle cx='16' cy='16' r='9' fill='%23b79cff'/%3E%3Ccircle cx='19' cy='14' r='9' fill='%23030304'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+  <a class="skip" href="#featured">Skip to projects</a>
+
+  <!-- ENTRANCE -->
+  <div id="intro" class="intro">
+    <div class="intro__stage" aria-hidden="true">
+      <svg class="intro__ring" viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" pathLength="1"/></svg>
+      <span class="intro__moon"></span>
+    </div>
+    <p class="intro__line" role="status"></p>
+    <button type="button" class="intro__skip">Skip</button>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" data-target="top" aria-label="Penumbra, back to the top">
+      <span class="nav__mark" aria-hidden="true"></span><span data-site-name>Penumbra</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary"></nav>
+    <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu"><span>Menu</span></button>
+  </header>
+  <div id="menu" class="menu" hidden>
+    <nav id="menu-links" aria-label="Menu"></nav>
+  </div>
+
+  <div id="app">
+    <main id="main">
+
+      <!-- THRESHOLD -->
+      <section class="hero" id="top" aria-label="Introduction">
+        <div class="eclipse" aria-hidden="true">
+          <div class="eclipse__glow"></div>
+          <div class="eclipse__ring"></div>
+          <div class="eclipse__disc"></div>
+          <div class="eclipse__moon"></div>
+        </div>
+        <div class="hero__copy">
+          <h1 class="hero__title"></h1>
+          <p class="hero__lede"></p>
+        </div>
+        <p class="hero__cue"><span class="hero__cue-line" aria-hidden="true"></span>Scroll to enter the archive</p>
+      </section>
+
+      <!-- STATISTICS -->
+      <section class="stats-sec" id="inventory" aria-label="Project statistics">
+        <div class="wrap">
+          <div class="rule" aria-hidden="true"></div>
+          <div class="stats" id="stats"></div>
+        </div>
+      </section>
+
+      <!-- FEATURED -->
+      <section class="sec" id="featured" aria-labelledby="featured-h">
+        <div class="wrap">
+          <header class="sec__head">
+            <h2 id="featured-h" class="sec__title">Featured projects</h2>
+            <p class="sec__note">A few pieces worth starting with.</p>
+          </header>
+          <div class="featured" id="featured-grid"></div>
+        </div>
+      </section>
+
+      <!-- ALL PROJECTS -->
+      <section class="sec" id="archive" aria-labelledby="archive-h">
+        <div class="wrap">
+          <header class="sec__head">
+            <h2 id="archive-h" class="sec__title">All projects</h2>
+            <p class="sec__note">Everything in the space: finished, in progress, imagined.</p>
+          </header>
+          <div class="controls" id="archive-controls"></div>
+          <p class="sr-only" id="archive-status" role="status" aria-live="polite"></p>
+          <div class="grid" id="all-grid"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="sec about" id="about" aria-labelledby="about-h">
+        <div class="wrap">
+          <div class="rule" aria-hidden="true"></div>
+          <div class="about__grid">
+            <div class="about__main">
+              <h2 id="about-h" class="sec__title">About this space</h2>
+              <p class="about__lead"><span data-site-name>Penumbra</span> is the place where our creations rest: finished, half-built, abandoned, or simply imagined. It is not a résumé. It is a map of what exists, what is being built, and what is still just a shape in the darkness.</p>
+              <p class="about__text">Projects live here next to the experiments that never became projects, and the ideas that haven't started yet. New pieces arrive all the time, so the space is never finished. That is on purpose.</p>
+            </div>
+            <div class="about__side">
+              <h3 class="about__h">What lives here</h3>
+              <ul class="about__list">
+                <li><strong>Projects</strong> that are complete and work.</li>
+                <li><strong>Developments</strong> still being built.</li>
+                <li><strong>Experiments</strong> with no promise attached.</li>
+                <li><strong>Ideas</strong> waiting for their turn.</li>
+              </ul>
+              <h3 class="about__h">How to read the archive</h3>
+              <dl class="legend" id="legend"></dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER DIMENSIONS -->
+      <section class="sec dimensions" id="dimensions" aria-labelledby="dim-h">
+        <div class="wrap">
+          <header class="sec__head sec__head--center">
+            <h2 id="dim-h" class="sec__title">Other dimensions</h2>
+            <p class="sec__note">This is one space among several. Each of these is a different place, connected to this one.</p>
+          </header>
+          <div class="portals" id="dimensions-list"></div>
+          <div class="repos" id="repos" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <div class="footer__row">
+          <p class="footer__line">Always one more piece to add.</p>
+          <div class="footer__links">
+            <a href="#top" data-target="top">Back to the threshold</a>
+            <button type="button" id="replay">Replay the entrance</button>
+          </div>
+        </div>
+        <p class="footer__word" aria-hidden="true" data-site-name>Dark AB</p>
+        <p class="footer__small">© <span data-year></span> <span data-site-name>Dark AB</span>. Built by hand.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- PROJECT PAGE (filled when a card opens) -->
+  <div id="project" class="project" role="dialog" aria-modal="true" aria-label="Project details" hidden>
+    <div class="project__scroll"></div>
+  </div>
+  <div id="project-frame" class="project-frame" hidden aria-hidden="true"></div>
+
+  <noscript><p class="noscript">This space needs JavaScript to show its projects.</p></noscript>
+
+  <script src="js/config.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/code-viewer.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/archive.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/project-view.js"></script>
+  <script src="js/dimensions.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

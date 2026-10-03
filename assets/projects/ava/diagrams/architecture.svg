@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1200" height="700" fill="#07060b"/>
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8f63ff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#8f63ff" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#b79cff"/>
+    </marker>
+  </defs>
+  <circle cx="600" cy="350" r="300" fill="url(#g)"/>
+  <!-- core -->
+  <circle cx="600" cy="350" r="92" fill="#030304" stroke="#b79cff" stroke-width="2"/>
+  <text x="600" y="346" text-anchor="middle" fill="#f5f2fb" font-size="30">Core</text>
+  <text x="600" y="376" text-anchor="middle" fill="#a9a6b3" font-size="15">lifecycle · config</text>
+  <!-- bus -->
+  <ellipse cx="600" cy="350" rx="250" ry="250" fill="none" stroke="#f5f2fb" stroke-opacity=".25" stroke-dasharray="4 8"/>
+  <text x="600" y="92" text-anchor="middle" fill="#a9a6b3" font-size="15">event bus</text>
+  <!-- modules -->
+  <g fill="#0d0b14" stroke="#f5f2fb" stroke-opacity=".5">
+    <rect x="130" y="290" width="200" height="120" rx="14"/>
+    <rect x="870" y="290" width="200" height="120" rx="14"/>
+    <rect x="500" y="540" width="200" height="110" rx="14"/>
+    <rect x="500" y="50" width="0" height="0"/>
+  </g>
+  <g fill="#f5f2fb" font-size="22" text-anchor="middle">
+    <text x="230" y="345">Input</text>
+    <text x="970" y="345">Output</text>
+    <text x="600" y="592">Memory</text>
+  </g>
+  <g fill="#a9a6b3" font-size="14" text-anchor="middle">
+    <text x="230" y="372">voice · text</text>
+    <text x="970" y="372">speech · UI</text>
+    <text x="600" y="618">SQLite</text>
+  </g>
+  <g stroke="#b79cff" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M330 350 H506"/>
+    <path d="M694 350 H864"/>
+    <path d="M600 442 V534"/>
+  </g>
+  <circle cx="600" cy="100" r="7" fill="#b79cff"/>
+  <circle cx="350" cy="140" r="5" fill="#f5f2fb"/>
+  <circle cx="860" cy="560" r="5" fill="#f5f2fb"/>
+</svg>

@@ -9,7 +9,7 @@ PENUMBRA.config = {
   /* ---- Identity (change the name here and it updates everywhere) ---- */
   name: "Penumbra",
   tagline: ["Some ideas only", "show up in the dark."],
-  lede: "Two perspectives. One shared space. Here, Dark AB and Ale Bunny. bring together what we build, explore, and leave in progress. Some projects have a defined form; others are just beginning to find theirs. This space grows with every idea.",
+  lede: "Two perspectives. One shared space. Here, Dark AB and White Bunny. bring together what we build, explore, and leave in progress. Some projects have a defined form; others are just beginning to find theirs. This space grows with every idea.",
   description: "An archive of projects, experiments and ideas.",
 
   /* ---- Entrance sequence ---- */

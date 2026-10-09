@@ -126,8 +126,8 @@ export function createBus() {
       { src: "diagrams/architecture.svg", caption: "High-level architecture: the core, the event bus and the modules around it." },
     ],
     images: [
-      { src: "images/x2.jpg", caption: "AVA's representative logo. By: Ale" },
-      { src: "images/x1.jpg", caption: "Graphic representation of AVA. By: Ale" },
+      { src: "images/x2.jpg", caption: "AVA's representative logo. By: White Bunny" },
+      { src: "images/x1.jpg", caption: "Graphic representation of AVA. By: White Bunny" },
     ],
     docs: [
       { title: "Design notes", src: "docs/design-notes.md", type: "Markdown" },
